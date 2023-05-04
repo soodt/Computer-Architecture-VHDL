@@ -1,0 +1,214 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 LIBRARY ieee;\
+USE ieee.std_logic_1164.ALL;\
+ \
+-- Uncomment the following library declaration if using\
+-- arithmetic functions with Signed or Unsigned values\
+--USE ieee.numeric_std.ALL;\
+ \
+ENTITY 
+\f1\fs36 RF_DestReg_Decoder_21356526\expnd0\expndtw0\kerning0
+_TB is \
+\pard\pardeftab720\partightenfactor0
+\cf0 end RF_DestReg_Decoder_21356526_TB; \
+architecture Behavioral of RF_DestReg_Decoder_21356526_TB is \
+ COMPONENT \kerning1\expnd0\expndtw0 RF_DestReg_Decoder_21356526\expnd0\expndtw0\kerning0
+ is \
+Port ( A : in std_logic_vector(4 downto 0); \
+	Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31 : out std_logic);\
+end  COMPONENT;\
+--Inputs\
+   signal A : std_logic_vector(4 downto 0) := (others => '0');\
+--Outputs\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 \kerning1\expnd0\expndtw0  Signal Q0 : std_logic := (others => '0');\
+ Signal Q1 : std_logic := (others => '0');\
+ Signal Q2 : std_logic := (others => '0');\
+ Signal Q3 : std_logic := (others => '0');\
+ Signal Q4 : std_logic := (others => '0');\
+ Signal Q5 : std_logic := (others => '0');\
+ Signal Q6 : std_logic := (others => '0');\
+ Signal Q7 : std_logic := (others => '0');\
+ Signal Q8 : std_logic := (others => '0');\
+ Signal Q9 : std_logic := (others => '0');\
+ Signal Q10 : std_logic := (others => '0');\
+ Signal Q11 : std_logic := (others => '0');\
+ Signal Q12 : std_logic := (others => '0');\
+ Signal Q13 : std_logic := (others => '0');\
+ Signal Q14 : std_logic := (others => '0');\
+ Signal Q15 : std_logic := (others => '0');\
+ Signal Q16 : std_logic := (others => '0');\
+ Signal Q17 : std_logic := (others => '0');\
+ Signal Q18 : std_logic := (others => '0');\
+ Signal Q19 : std_logic := (others => '0');\
+ Signal Q20 : std_logic := (others => '0');\
+ Signal Q21 : std_logic := (others => '0');\
+ Signal Q22 : std_logic := (others => '0');\
+ Signal Q23 : std_logic := (others => '0');\
+ Signal Q24 : std_logic := (others => '0');\
+ Signal Q25 : std_logic := (others => '0');\
+ Signal Q26 : std_logic := (others => '0');\
+ Signal Q27 : std_logic := (others => '0');\
+ Signal Q28 : std_logic := (others => '0');\
+ Signal Q29 : std_logic := (others => '0');\
+ Signal Q30 : std_logic := (others => '0');\
+ Signal Q31 : std_logic := (others => '0');\
+\
+--   constant Clk_period : time := 10 ns;\
+ \
+BEGIN\
+ \
+	-- Instantiate the Unit Under Test (UUT)\
+   uut: 
+\f1\fs36 RF_DestReg_Decoder_21356526
+\f2\fs24  PORT MAP (
+\f1\fs36 \
+	   A => A,\
+
+\f2\fs24        Q0 => Q0,\
+       Q1 => Q1,\
+       Q2 => Q2,\
+       Q3 => Q3,\
+       Q4 => Q4,\
+       Q5 => Q5,\
+       Q6 => Q6,\
+       Q7 => Q7,\
+       Q8 => Q8,\
+       Q9 => Q9,\
+       Q10 => Q10,\
+       Q11 => Q11,\
+       Q12 => Q12,\
+       Q13 => Q13,\
+       Q14 => Q14,\
+       Q15 => Q15,\
+       Q16 => Q16,\
+       Q17 => Q17,\
+       Q18 => Q18,\
+       Q19 => Q19,\
+       Q20 => Q20,\
+       Q21 => Q21,\
+       Q22 => Q22,\
+       Q23 => Q23,\
+       Q24 => Q24,\
+       Q25 => Q25,\
+       Q26 => Q26,\
+       Q27 => Q27,\
+       Q28 => Q28,\
+       Q29 => Q29,\
+       Q30 => Q30,\
+       Q31 => Q31\
+);\
+stim_proc: process\
+   begin\
+\
+wait for 10 ns;\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs36 \cf0 \expnd0\expndtw0\kerning0
+A<="00000" ;\
+wait for 10 ns;	\
+		A <= "00001";\
+\
+      wait for 10 ns;	\
+		A <= "00010";\
+\
+      wait for 10 ns;	\
+		A <= "00011";\
+\
+      wait for 10 ns;	\
+		A <= "00100";\
+\
+      wait for 10 ns;	\
+		A <= "00101";\
+\
+      wait for 10 ns;	\
+		A<= "00110";\
+  \
+      wait for 10 ns;	\
+		A <= "00111";\
+  \
+      wait for 10 ns;	\
+		A <= "01000";\
+\
+      wait for 10 ns;	\
+		A <= "01001";\
+\
+      wait for 10 ns;	\
+		A <= "01010";\
+\
+      wait for 10 ns;	\
+		A <= "01011";\
+\
+     wait for 10 ns;	\
+		A <= "01100";\
+\
+     wait for 10 ns;	\
+		A <= "01101";\
+\
+     wait for 10 ns;	\
+		A <= "01110";\
+\
+     wait for 10 ns;	\
+		A<= "01111";\
+\
+     wait for 10 ns;	\
+		s <= "10000";\
+\
+      wait for 10 ns;	\
+		s <= "10001";\
+\
+      wait for 10 ns;	\
+		s <= "10010";\
+\
+      wait for 10 ns;	\
+		s <= "10011";\
+\
+      wait for 10 ns;	\
+		s <= "10100";\
+\
+      wait for 10 ns;	\
+		s <= "10101";\
+  \
+      wait for 10 ns;	\
+		s <= "10110";\
+  \
+      wait for 10 ns;	\
+		s <= "10111";\
+\
+      wait for 10 ns;	\
+		s <= "11000";\
+\
+      wait for 10 ns;	\
+		s <= "11001";\
+\
+      wait for 10 ns;	\
+		s <= "11010";\
+\
+     wait for 10 ns;	\
+		s <= "11011";\
+\
+     wait for 10 ns;	\
+		s <= "11100";\
+\
+     wait for 10 ns;	\
+		s <= "11101";\
+\
+     wait for 10 ns;	\
+		s <= "11110";\
+\
+     wait for 10 ns;	\
+		s <= "11111";\
+ --     wait;\
+   end process;\
+\
+END;\
+\
+  }

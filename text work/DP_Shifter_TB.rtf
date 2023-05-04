@@ -1,0 +1,179 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 library IEEE;\
+use IEEE.STD_LOGIC_1164.ALL;\
+\
+-- Uncomment the following library declaration if using\
+-- arithmetic functions with Signed or Unsigned values\
+--use IEEE.NUMERIC_STD.ALL;\
+\
+-- Uncomment the following library declaration if instantiating\
+-- any Xilinx leaf cells in this code.\
+--library UNISIM;\
+--use UNISIM.VComponents.all;\
+\
+entity DP_Shifter_21356526_TB is\
+end DP_Shifter_2136526_TB;\
+\
+architecture Behavioral of DP_Shifter_21356526_TB is\
+\
+
+\f1\fs28 COMPONENT 
+\f0\fs24 DP_Shifter_2136526\
+Port   ( B  : in  STD_LOGIC_VECTOR (31 downto 0);\
+              S1   : in  STD_LOGIC;\
+	    S2   : in  STD_LOGIC;\
+              G : out STD_LOGIC_VECTOR (31 downto 0);\
+	   c : out  STD_LOGIC);\
+end 
+\f1\fs28 COMPONENT;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 --Inputs
+\fs36 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+	
+\fs24 Signal  
+\fs36 B : in std_logic_vector(
+\f1\fs28 31 downto 0)
+\f0\fs24  := (others => '0')
+\f1\fs28 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0        
+\fs24 Signal 
+\fs36  S1 : in std_logic 
+\fs24  := (others => '0')
+\fs36 ;\
+ 	
+\fs24 Signal  
+\fs36 S2 : in std_logic 
+\fs24  := (others => '0')
+\fs36 ;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0  	--Outputs\
+
+\fs36 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0         
+\fs24 Signal  
+\fs36 G : out std_logic_vector(
+\f1\fs28 31 downto 0)
+\f0\fs24  := (others => '0')
+\f1\fs28 ;
+\f0\fs36  \
+	
+\fs24 Signal  
+\fs36 c : out std_logic 
+\fs24  := (others => '0')
+\fs36 ;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 --   constant Clk_period : time := 10 ns;\
+ \
+BEGIN\
+ \
+	-- Instantiate the Unit Under Test (UUT)\
+   uut: DP_Shifter_2136526 
+\f1\fs36 \expnd0\expndtw0\kerning0
+PORT MAP (\
+	
+\f0 \kerning1\expnd0\expndtw0 B 
+\f1 \expnd0\expndtw0\kerning0
+=> B
+\f0 \kerning1\expnd0\expndtw0 ,\
+	S1 
+\f1 \expnd0\expndtw0\kerning0
+=> S1,
+\f0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 	S2 
+\f1 \expnd0\expndtw0\kerning0
+=> S2,
+\f0 \kerning1\expnd0\expndtw0 \
+        G 
+\f1 \expnd0\expndtw0\kerning0
+=> G,
+\f0 \kerning1\expnd0\expndtw0 \
+	c
+\f1 \expnd0\expndtw0\kerning0
+=> c\
+);\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 stim_proc: process\
+   begin\
+\
+	
+\f0 \kerning1\expnd0\expndtw0 A 
+\f1 \expnd0\expndtw0\kerning0
+<= \'931010001011101111111101110\'94
+\f0 \kerning1\expnd0\expndtw0 ;\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0         S1 <
+\f1 \expnd0\expndtw0\kerning0
+= \'930\'94;
+\f0 \kerning1\expnd0\expndtw0 \
+	S2 <
+\f1 \expnd0\expndtw0\kerning0
+= \'930\'94;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 wait for 10 ns;	\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0         S1 <
+\f1 \expnd0\expndtw0\kerning0
+= \'930\'94;
+\f0 \kerning1\expnd0\expndtw0 \
+	S2 <
+\f1 \expnd0\expndtw0\kerning0
+= \'931\'94;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 wait for 10 ns;	\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0         S1 <
+\f1 \expnd0\expndtw0\kerning0
+= \'931\'94;
+\f0 \kerning1\expnd0\expndtw0 \
+	S2 <
+\f1 \expnd0\expndtw0\kerning0
+= \'930\'94;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 wait for 10 ns;	\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0         S1 <
+\f1 \expnd0\expndtw0\kerning0
+= \'931\'94;
+\f0 \kerning1\expnd0\expndtw0 \
+	S2 <
+\f1 \expnd0\expndtw0\kerning0
+= \'931\'94;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 wait for 10 ns;	\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 --     wait;\
+   end process;\
+\
+END;\
+}
